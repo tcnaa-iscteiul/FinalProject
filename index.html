@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Tasty</title>
+    <meta name="description" content="Ao escrever esta meta tag, usa entre 140 e 160 caracteres para que o Google possa exibir toda a descrição deste website. Não te esqueças de incluir uma palavra-chave!">
+    <meta name="keywords" content="HTML, CSS: isto são as palavras-chave do website">
+    <meta name="author" content="Tatiana Clim">
+</head>
+
+<body>
+    <!-- Header -->
+    <section id="header">
+        <div class="header container">
+            <div class="nav-bar">
+                <div class="brand">
+                    <a href="#hero">
+                        <h1><span>T</span>asty<span> 2</span>4/7</h1>
+                    </a>
+                </div>
+                <div class="nav-list">
+                    <div class="hamburger">
+                        <div class="bar"></div>
+                    </div>
+                    <ul>
+                        <li><a class="nav__link" href="#hero" data-after="Home">Home</a></li>
+                        <li><a class="nav__link" href="#menu" data-after="Menu">Menu</a></li>
+                        <li><a class="nav__link" href="#about" data-after="About">About</a></li>
+                        <li><a class="nav__link cta" href="#orderNow" data-after="orderNow" style="color:white">Order Now </a></li>
+                        <li><a class="nav__link" href="#contact" data-after="Contact">Contacts</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Header -->
+    <!-- Hero Section  -->
+    <section id="hero">
+        <div class="hero container">
+            <div>
+                <h1>Really Fresh<span></span></h1>
+                <h1>And Tasty<span></span></h1>
+                <a href="#orderNow" type="button" class="cta">Order now</a>
+            </div>
+        </div>
+    </section>
+    <!-- End Hero Section  -->
+    <!-- Menu Section -->
+    <br />
+    <section id="menu">
+        <br /><br />
+        <div class="menu container">
+            <div class="menu-header">
+                <h1 class="section-title">Dishes of the  <span>Week</span></h1>
+            </div>
+            <div class="all-menu">
+            </div>
+        </div>
+    </section>
+    <!-- End menu Section -->
+    <!-- Order Now -->
+    <br /> <br /> <br />
+    <section id="orderNow">
+        <div class="orderNow">
+            <div class="col-left">
+                <h1 class="section-title">Order no<span>w</span></h1>
+
+                <div class="loginOrSignup">
+                    <input type="button" class="cta" id="LoginBtn" style="color:black" value="Log in">
+                    <input type="button" class="cta" id="RegisterBtn" style="color:black" value="Sign up">
+                </div>
+                <form id="LogIn" class="formContainer">
+                    <fieldset>
+                        <br /><br />
+                        <label for="name">Username</label>
+                        <input type="text" id="username" name="username" placeholder="Insert your e-mail..." required>
+                        <label for="password">Password</label>
+                        <input type="text" id="pass" name="password" placeholder="Insert your password..." required>
+
+                        <button class="cta" style="color:black">Log In</button>
+                    </fieldset>
+                </form>
+                <form id="RegisterUser" class="formContainer">
+                    <fieldset>
+                        <br /><br />
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Insert your name..." required>
+                        <label for="phone">Phone number:</label>
+                        <input type="text" id="phone" name="phoneNumber" placeholder="Insert your phone number..." required>
+                        <label for="email">E-mail</label>
+                        <input type="text" id="email" name="email" placeholder="Insert your e-mail..." required>
+                        <label for="password">Password</label>
+                        <input type="text" id="pass" name="password" placeholder="Insert your password..." required onkeyup='verifyPassword();'>
+                        <label for="confirm_password">Confirm Password</label>
+                        <span id='message' style=" display: inline; text-align: right;"></span>
+                        <input type="text" id="confirm_password" name="confirm_password" required onkeyup='verifyPassword();'>
+
+                        <label for="address">Address</label>
+                        <input type="text" id="address" name="address" placeholder="Insert your address..." required>
+                        <button class="cta" style="color:black">Register</button>
+                    </fieldset>
+                </form>
+
+            </div>
+        </div>
+    </section>
+    <!-- End Order Now Section -->
+    <!-- Schedule Section -->
+    <section id="services" class="formContainer">
+        <div class="services container">
+
+            <div class="service-top">
+                <h1 class="section-title"><span>S</span>chedule Sectio<span>n</span></h1>
+            </div>
+            <div class="service-bottom">
+            </div>
+            <div class="service-bottom">
+                <button class="cta" id="orderButton" style="color:black">Order</button>
+                <button class="cta" id="LogOut" style="color:black">Log Out</button>
+            </div>
+            <div class="price">
+            </div>
+        </div>
+    </section>
+    <!-- End Service Section -->
+    <!-- About Section -->
+    <section id="about">
+        <div class="about container">
+            <div class="col-left">
+                <div class="about-img">
+                    <img src="./img/02.jpg" alt="img">
+                </div>
+            </div>
+            <div class="col-right">
+                <h1 class="section-title">Welcome to <span>Tasty</span></h1>
+                <p>
+                    Tasty <span>is the best restaurant in town</span>
+                    All of our menu items are inspired by american cuisine and have been created by our head chef.
+                    Not only do we have fresh flown-in seafood from the northeast, but we also have a variety of handcrafted cocktails, wine, and beer to choose from.
+                    Come dine with us & experience an authentic tasty and fresh meal in an intimate dining space. We look forward to serving you!
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- End About Section -->
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact container">
+            <div>
+                <h1 class="section-title">Contact<span>s</span></h1>
+            </div>
+            <div class="contact-items">
+                <div class="contact-item">
+                    <div class="icon"><i class="fa fa-phone" style="font-size:60px;color:CornflowerBlue;"></i></div>
+                    <div class="contact-info">
+                        <h1>Phone number</h1>
+                        <h2>+351 999 999 999</h2>
+                        <h2>+351 222 222 222</h2>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon"><i class="fa fa-envelope" style="font-size:60px;color:CornflowerBlue;"></i></div>
+                    <div class="contact-info">
+                        <h1>E-mail</h1>
+                        <h2>info@tasty.com</h2>
+                        <h2>tasty@tasty.com</h2>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon"><i class="fa fa-map-pin" style="font-size:60px;color:CornflowerBlue;"></i></div>
+
+                    <div class="contact-info">
+                        <h1>Address</h1>
+                        <a href="https://www.google.com/maps?q=rua+de+moçambique+24,+Portimao&client=firefox-b-d&sxsrf=ALeKk02FWGqmE4Sicb-w0oNUu75B4TkyvA:1625956892883&gs_lcp=Cgdnd3Mtd2l6EAM6BwgAEEcQsAM6AggmOggIIRAWEB0QHkoECEEYAFD0KVjXO2C6PWgBcAJ4AIABoQGIAdEJkgEDMy44mAEAoAEBqgEHZ3dzLXdpesgBCMABAQ&uact=5&um=1&ie=UTF-8&sa=X&ved=2ahUKEwi9g6m8ydnxAhVKXBoKHesSA70Q_AUoAXoECAEQAw" target="_blank" ;><h2>Rua de Moçambique 24 RC/D, Portimão </h2></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Contact Section -->
+    <!-- Footer -->
+    <section id="footer">
+        <div class="footer container">
+            <div class="brand">
+                <h1><span>T</span>asty <span>2</span>4/7</h1>
+            </div>
+            <h2>Just one phone call away from us</h2>
+            <div class="social-icon">
+                <div class="social-item">
+                    <a href="#"><i class="fa fa-facebook-square" style="font-size:40px;color:CornflowerBlue;"></i></a>
+                </div>
+                <div class="social-item">
+                    <a href="#"><i class="fa fa-instagram" style="font-size:40px;color:CornflowerBlue;"></i></a>
+                </div>
+                <div class="social-item">
+                    <a href="#"><i class="fa fa-twitter-square" style="font-size:40px;color:CornflowerBlue;"></i></a>
+                </div>
+                <div class="social-item">
+                    <a href="#"><i class="fa fa-linkedin-square" style="font-size:40px;color:CornflowerBlue;"></i></a>
+                </div>
+            </div>
+            <p>© 2022 All rights reserved. Designed by Tatiana Clim</p>
+        </div>
+    </section>
+    <!-- End Footer -->
+    <script src="script.js"></script>
+</body>
+
+</html>
